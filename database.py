@@ -1,11 +1,12 @@
+import os
 import psycopg2
 from psycopg2.extras import RealDictCursor
 DB_CONFIG = {
-    "host": "127.0.0.1",
-    "port": 5433,
-    "database": "taskdb",
-    "user": "postgres",
-    "password": "mysecretpassword"
+    "host": os.environ.get("DB_HOST", "127.0.0.1"),
+    "port": int(os.environ.get("DB_PORT", 5433)),
+    "database": os.environ.get("DB_NAME", "taskdb"),
+    "user": os.environ.get("DB_USER", "postgres"),
+    "password": os.environ.get("DB_PASSWORD", "mysecretpassword")
 }
 
 def get_connection():
