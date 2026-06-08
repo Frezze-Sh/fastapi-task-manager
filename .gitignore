@@ -53,5 +53,11 @@ Thumbs.db
 # Logs
 *.log
 
-# tasks.db
+# Базы данных
 *.db
+*.sqlite
+*.sqlite3
+
+# Папки с данными
+data/
+db/
