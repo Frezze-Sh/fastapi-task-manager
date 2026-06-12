@@ -48,14 +48,14 @@
 
 Если у вас ещё не запущен контейнер с БД:
 ```docker run --name my_postgres -e POSTGRES_PASSWORD=mysecretpassword -e POSTGRES_DB=taskdb -p 5433:5432 -d postgres```
-
+<br>
 2) Сборка и запуск API
 
 Соберите Docker образ:
 ```docker build -t task-api .```
 Запустите контейнер, передав адрес хоста для подключения к БД:
 ```docker run -d -p 8000:8000 -e DB_HOST=host.docker.internal --name my_task_api task-api```
-
+<br>
 3) Проверка работы:
 
 Откройте браузер и перейдите по адресу:
