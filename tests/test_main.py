@@ -3,7 +3,6 @@ import time
 from fastapi.testclient import TestClient
 from main import app
 
-# Создаем тестовый клиент. Он общается с твоим приложением напрямую, без сети.
 client = TestClient(app)
 
 
